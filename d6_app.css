@@ -1,16 +1,23 @@
-div#face {
+div.dieFace {
   background-color: white;
   border: 5px solid black;
   height: 100px;
   width: 100px;
-  margin: 200px auto;
-  display: flex;
+  min-width: 100px;
+  margin: 200px 5%;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   border-radius: 10%;
 }
 
-p#faceNum {
+div#dice {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+p.faceNum {
   font-size: 80px;
   user-select: none;
 }
