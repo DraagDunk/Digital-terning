@@ -9,11 +9,12 @@ function rollDie(sides = 6) {
 
 // Simpel animation for lidt visuel feedback
 function rollAnimation(die) {
+  backCol = die.style.backgroundColor
   die.style.backgroundColor = 'red'
   die.style.transform = 'rotate(10deg)'
   setTimeout(function () {
     die.style.transform = 'rotate(0deg)';
-    die.style.backgroundColor = 'white';
+    die.style.backgroundColor = backCol;
   }, 100)
 }
 
