@@ -29,4 +29,16 @@ body {
 button#dm-button {
   position: fixed;
   bottom: 20px;
+  border: 2px solid darkslategray;
+  color: darkslategray;
+  background-color: rgba(0,0,0,0);
+  width: 150px;
+  height: 3em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+div#dm-button-container {
+  display: flex;
+  justify-content: center;
 }
