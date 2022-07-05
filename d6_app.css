@@ -47,3 +47,8 @@ button {
   text-transform: uppercase;
   font-weight: bold;
 }
+
+button:disabled {
+  border-color: gray;
+  color: gray;
+}

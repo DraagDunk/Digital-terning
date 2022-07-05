@@ -10,19 +10,21 @@ function construct_die(die, face) {
 }
 
 function add_die() {
-    if (num_dice < 4) {
-        const newDie = document.createElement("div")
-        newDie.className = "dieFace"
-        const newFace = document.createElement("p")
-        newFace.className = "faceNum"
-        construct_die(newDie, newFace)
-        die_con.append(newDie)
+    const newDie = document.createElement("div")
+    newDie.className = "dieFace"
+    const newFace = document.createElement("p")
+    newFace.className = "faceNum"
+    construct_die(newDie, newFace)
+    die_con.append(newDie)
 
-        newDie.addEventListener("click", rollD6)
-        newDie.dispatchEvent(new Event("click"))
+    newDie.addEventListener("click", rollD6)
+    newDie.dispatchEvent(new Event("click"))
 
-        num_dice++
+    num_dice++
+    if (num_dice >= 4) {
+        add_die_btn.setAttribute("disabled", "")
     }
+
 }
 
 add_die_btn.addEventListener("click", add_die)

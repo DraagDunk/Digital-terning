@@ -2,9 +2,9 @@
 const btns = document.querySelectorAll('button')
 const dm_btn = document.querySelector('#dm-button')
 const body = document.querySelector('body')
-const diceFaces = document.querySelectorAll('.dieFace')
 
 function darkMode() {
+  const diceFaces = document.querySelectorAll('.dieFace')
   body.style.backgroundColor = 'darkslategray';
   mode = 'dark';
   dm_btn.innerText = 'Lyst udtryk';
@@ -19,6 +19,7 @@ function darkMode() {
 }
 
 function lightMode() {
+  const diceFaces = document.querySelectorAll('.dieFace')
   body.style.backgroundColor = 'aquamarine';
   mode = 'light';
   dm_btn.innerText = 'Mørkt udtryk';

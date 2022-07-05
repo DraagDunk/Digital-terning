@@ -25,6 +25,14 @@ function rollD6() {
   rollAnimation(this)
 }
 
+// Slå med alle terninger
+function rollAll() {
+  const dice = document.querySelectorAll(".dieFace");
+  for (let die of dice) {
+    die.dispatchEvent(new Event("click"))
+  }
+}
+
 // Tal på terningen i det siden åbnes
 for (let face of faceNum) {
   face.innerText = rollDie(6)
@@ -34,3 +42,7 @@ for (let face of faceNum) {
 for (let die of dice) {
   die.addEventListener('click', rollD6)
 }
+
+// Slå med alle terninger ved klik
+let roll_all_btn = document.querySelector("#roll-all")
+roll_all_btn.addEventListener("click", rollAll)
