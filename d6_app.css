@@ -26,19 +26,24 @@ body {
   background-color: aquamarine;
 }
 
-button#dm-button {
+.buttons-container {
+  display: flex;
   position: fixed;
   bottom: 20px;
+  right: 50%;
+  transform: translate(50%, 0);
+}
+
+.button-container {
+  padding: 1rem;
+}
+
+button {
   border: 2px solid darkslategray;
   color: darkslategray;
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0, 0, 0, 0);
   width: 150px;
   height: 3em;
   text-transform: uppercase;
   font-weight: bold;
-}
-
-div#dm-button-container {
-  display: flex;
-  justify-content: center;
 }
