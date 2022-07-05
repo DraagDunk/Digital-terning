@@ -6,7 +6,7 @@ let r = document.querySelector(":root")
 
 function darkMode() {
   mode = 'dark';
-  dm_btn.innerText = 'Lyst udtryk';
+  document.querySelector("#dm-button > img").setAttribute("src", "sun.png");
   r.style.setProperty("--backColor", "darkslategray")
   r.style.setProperty("--textColor", "aquamarine")
   r.style.setProperty("--faceColor", "gray")
@@ -15,7 +15,7 @@ function darkMode() {
 
 function lightMode() {
   mode = 'light';
-  dm_btn.innerText = 'Mørkt udtryk';
+  document.querySelector("#dm-button > img").setAttribute("src", "moon.png");
   r.style.setProperty("--backColor", "aquamarine")
   r.style.setProperty("--textColor", "darkslategray")
   r.style.setProperty("--faceColor", "white")
