@@ -42,4 +42,4 @@ function toggleMode() {
   }
 }
 
-document.querySelector("#dm-button").addEventListener("click", toggleMode)
+dm_btn.addEventListener("click", toggleMode)
