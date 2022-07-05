@@ -2,34 +2,23 @@
 const btns = document.querySelectorAll('button')
 const dm_btn = document.querySelector('#dm-button')
 const body = document.querySelector('body')
+let r = document.querySelector(":root")
 
 function darkMode() {
-  const diceFaces = document.querySelectorAll('.dieFace')
-  body.style.backgroundColor = 'darkslategray';
   mode = 'dark';
   dm_btn.innerText = 'Lyst udtryk';
-  for (let btn of btns) {
-    btn.style.color = 'aquamarine';
-    btn.style.borderColor = 'aquamarine';
-  }
-  for (let face of diceFaces) {
-    face.style.backgroundColor = 'gray';
-  }
+  r.style.setProperty("--backColor", "darkslategray")
+  r.style.setProperty("--textColor", "aquamarine")
+  r.style.setProperty("--faceColor", "gray")
 
 }
 
 function lightMode() {
-  const diceFaces = document.querySelectorAll('.dieFace')
-  body.style.backgroundColor = 'aquamarine';
   mode = 'light';
   dm_btn.innerText = 'Mørkt udtryk';
-  for (let btn of btns) {
-    btn.style.color = 'darkslategray';
-    btn.style.borderColor = 'darkslategray';
-  }
-  for (let face of diceFaces) {
-    face.style.backgroundColor = 'white';
-  }
+  r.style.setProperty("--backColor", "aquamarine")
+  r.style.setProperty("--textColor", "darkslategray")
+  r.style.setProperty("--faceColor", "white")
 
 }
 
